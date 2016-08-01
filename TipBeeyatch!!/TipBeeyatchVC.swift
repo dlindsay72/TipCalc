@@ -8,8 +8,16 @@
 
 import UIKit
 
+extension Double {
+    func roundToPlaces(places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(self * divisor) / divisor
+    }
+}
+
 class TipBeeyatchVC: UIViewController {
     
+    // MARK: - @IBOutlets
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipPercentSlider: UISlider!
@@ -20,11 +28,20 @@ class TipBeeyatchVC: UIViewController {
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var splitAmountLabel: UILabel!
     
+    
+    // MARK: - Properties
+    
+    var tipCalc = TipCalc(billAmount: 0.0, tipPercent: 0.0)
+    
+    
     var tipPercentAmount = Int()
+    var tipPercentAsDecimalValue = Double()
     var tipTotal = Double()
   //  var totalBillAmount = Double()
     var numberOfPersons = Int()
     var splitTotalAmount = Double()
+    var totalBill = Double()
+    var totalBillAmountEntered = Double()
     
     
 
@@ -34,29 +51,58 @@ class TipBeeyatchVC: UIViewController {
     }
 
     
+    // MARK: - Functions
+    
     @IBAction func tipSliderMoved(_ sender: AnyObject) {
         
         tipPercentAmount = Int(tipPercentSlider.value)
+        calcTip()
+        updateUI()
+
         
-        tipPercentLabel.text = "Tip \(tipPercentAmount)%"
     }
     
    
     @IBAction func splitSliderMoved(_ sender: AnyObject) {
         numberOfPersons = Int(splitSlider.value)
         splitSliderLabel.text = "Split \(numberOfPersons)"
+        splitTotalAmount = Double(totalBill / Double(numberOfPersons)).roundToPlaces(places: 2)
+        splitAmountLabel.text = "$\(splitTotalAmount)"
     }
     
     @IBAction func billAmountEntered(_ sender: AnyObject) {
         
-        
-        if let totalBillAmount = Double(billAmountTextField.text!) {
-            totalAmountLabel.text = "$\(totalBillAmount)"
-        } else {
-            print("no amount entered")
-        }
+        calcTip()
+
         
     }
+    
+    func calcTip() {
+        
+        if let totalBillAmount = Double(billAmountTextField.text!) {
+            totalBillAmountEntered = totalBillAmount
+        }
+        
+        tipCalc.tipPercent = Double(tipPercentSlider.value)
+        tipCalc.billAmount = totalBillAmountEntered
+        
+        tipCalc.calculateTip()
+    }
+    
+    func updateUI() {
+        tipPercentLabel.text = "Tip \(tipPercentAmount)%"
+        
+        tipPercentAsDecimalValue = Double(tipPercentAmount) * 0.01
+        tipTotal = Double(totalBillAmountEntered * tipPercentAsDecimalValue).roundToPlaces(places: 2)
+        
+        
+        tipAmountLabel.text = "$\(tipTotal)"
+        totalBill = Double(totalBillAmountEntered + tipTotal).roundToPlaces(places: 2)
+        
+        totalAmountLabel.text = "$\(totalBill)"
+    }
+    
+    
 
 
 }

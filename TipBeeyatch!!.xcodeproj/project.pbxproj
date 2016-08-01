@@ -12,6 +12,7 @@
 		7B78DF851D4FA82B0025E067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B78DF831D4FA82B0025E067 /* Main.storyboard */; };
 		7B78DF871D4FA82B0025E067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B78DF861D4FA82B0025E067 /* Assets.xcassets */; };
 		7B78DF8A1D4FA82B0025E067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B78DF881D4FA82B0025E067 /* LaunchScreen.storyboard */; };
+		7B78DF951D4FD00A0025E067 /* TipCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B78DF941D4FD00A0025E067 /* TipCalc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7B78DF861D4FA82B0025E067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B78DF891D4FA82B0025E067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B78DF8B1D4FA82B0025E067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B78DF941D4FD00A0025E067 /* TipCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		7B78DF7E1D4FA82B0025E067 /* TipBeeyatch!! */ = {
 			isa = PBXGroup;
 			children = (
+				7B78DF931D4FCFD00025E067 /* Controller */,
+				7B78DF921D4FCFC80025E067 /* View */,
+				7B78DF911D4FCFBC0025E067 /* Model */,
 				7B78DF7F1D4FA82B0025E067 /* AppDelegate.swift */,
-				7B78DF811D4FA82B0025E067 /* TipBeeyatchVC.swift */,
 				7B78DF831D4FA82B0025E067 /* Main.storyboard */,
 				7B78DF861D4FA82B0025E067 /* Assets.xcassets */,
 				7B78DF881D4FA82B0025E067 /* LaunchScreen.storyboard */,
 				7B78DF8B1D4FA82B0025E067 /* Info.plist */,
 			);
 			path = "TipBeeyatch!!";
+			sourceTree = "<group>";
+		};
+		7B78DF911D4FCFBC0025E067 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B78DF941D4FD00A0025E067 /* TipCalc.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7B78DF921D4FCFC80025E067 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7B78DF931D4FCFD00025E067 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B78DF811D4FA82B0025E067 /* TipBeeyatchVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B78DF821D4FA82B0025E067 /* TipBeeyatchVC.swift in Sources */,
+				7B78DF951D4FD00A0025E067 /* TipCalc.swift in Sources */,
 				7B78DF801D4FA82B0025E067 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

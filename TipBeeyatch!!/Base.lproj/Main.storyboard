@@ -46,7 +46,7 @@
                                             <constraint firstAttribute="height" constant="50" id="vSt-UQ-cfP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <action selector="billAmountEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="anX-ds-iSQ"/>
                                         </connections>
