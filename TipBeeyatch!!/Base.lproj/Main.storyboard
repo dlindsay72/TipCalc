@@ -47,21 +47,30 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="billAmountEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="anX-ds-iSQ"/>
+                                        </connections>
                                     </textField>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-i2-25w">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-i2-25w">
                                         <color key="tintColor" red="0.1450980392" green="0.63529411759999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="229" id="S2h-RS-v26"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="tipSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="dLZ-e7-cWB"/>
+                                        </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3ai-VT-oDu">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="3ai-VT-oDu">
                                         <color key="tintColor" red="0.1450980392" green="0.63529411759999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="BlU-i1-KYE"/>
                                             <constraint firstAttribute="width" constant="229" id="o7H-k4-mOn"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="splitSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="yj8-lr-jt3"/>
+                                        </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip 160%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKL-fn-CLG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKL-fn-CLG">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="91" id="PYc-4W-En6"/>
                                             <constraint firstAttribute="height" constant="38" id="eU8-Vs-1Jg"/>
@@ -124,7 +133,7 @@
                                         <color key="textColor" red="0.1450980392" green="0.63529411759999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4156000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajM-z9-V0k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajM-z9-V0k">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="147" id="EsL-9i-CLO"/>
                                             <constraint firstAttribute="height" constant="33" id="Or8-nJ-Ikk"/>
@@ -133,7 +142,7 @@
                                         <color key="textColor" red="0.82352941180000006" green="0.38431372549999998" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4156000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-U1-rap">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-U1-rap">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="147" id="GFY-N5-3mi"/>
                                             <constraint firstAttribute="height" constant="33" id="IpU-cb-HlD"/>
@@ -142,7 +151,7 @@
                                         <color key="textColor" red="0.82352941180000006" green="0.38431372549999998" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$415600.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbc-Id-tQ0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbc-Id-tQ0">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="4pp-ec-wRJ"/>
                                             <constraint firstAttribute="width" constant="147" id="c4d-ly-EQw"/>
@@ -201,10 +210,20 @@
                             <constraint firstItem="Vnf-d0-Gwa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ido-cv-x1x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="NZf-1R-gcm" id="5Yj-PK-ERc"/>
+                        <outlet property="splitAmountLabel" destination="3Nc-U1-rap" id="Htx-lJ-WRd"/>
+                        <outlet property="splitSlider" destination="3ai-VT-oDu" id="0up-K1-yVN"/>
+                        <outlet property="splitSliderLabel" destination="Z1S-j0-Jho" id="zI8-Ya-akz"/>
+                        <outlet property="tipAmountLabel" destination="Nbc-Id-tQ0" id="Lv0-k9-It9"/>
+                        <outlet property="tipPercentLabel" destination="tKL-fn-CLG" id="Ax9-BM-Ey4"/>
+                        <outlet property="tipPercentSlider" destination="FE9-i2-25w" id="BSH-wo-iEr"/>
+                        <outlet property="totalAmountLabel" destination="ajM-z9-V0k" id="1cU-0j-SfI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="76.011994002998506"/>
+            <point key="canvasLocation" x="190" y="48"/>
         </scene>
     </scenes>
     <resources>
