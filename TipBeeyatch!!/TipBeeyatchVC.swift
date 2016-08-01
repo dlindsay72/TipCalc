@@ -20,7 +20,7 @@ class TipBeeyatchVC: UIViewController {
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var splitAmountLabel: UILabel!
     
-    var tipPercentAmount = Double()
+    var tipPercentAmount = Int()
     var tipTotal = Double()
   //  var totalBillAmount = Double()
     var numberOfPersons = Int()
@@ -36,11 +36,15 @@ class TipBeeyatchVC: UIViewController {
     
     @IBAction func tipSliderMoved(_ sender: AnyObject) {
         
+        tipPercentAmount = Int(tipPercentSlider.value)
+        
+        tipPercentLabel.text = "Tip \(tipPercentAmount)%"
     }
     
    
     @IBAction func splitSliderMoved(_ sender: AnyObject) {
-        
+        numberOfPersons = Int(splitSlider.value)
+        splitSliderLabel.text = "Split \(numberOfPersons)"
     }
     
     @IBAction func billAmountEntered(_ sender: AnyObject) {
